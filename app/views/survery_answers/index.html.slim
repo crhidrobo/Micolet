@@ -1,0 +1,19 @@
+= render 'layouts/title'
+.card.border-0
+  .my-1
+    .row
+      .col-md-2
+        = render 'layouts/slider'
+      .col-md-10
+        .row
+          .card-header.d-flex
+            .col-md-12
+              h3.card-title.mb-0.ml-xs-4.text-center
+                = t('survey.title')
+        - if @surveys.blank?
+          = render 'layouts/blanck'
+        - else
+          = render 'layouts/notification'
+          = render 'table'
+
+

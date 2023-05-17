@@ -1,0 +1,17 @@
+.card.border.col-md-12.bg-dark.text-center
+  .div.navflex-column.nav-pills id="v-pills-tab" role="tablist" aria-orientation="vertical"
+    .div.border-bottom.p-2
+      a#inicio-tab.nav-link.text-white data-toggle="pill" href="#{root_path}" role="tab" aria-controls="inicio" aria-selected="true"
+        = t('slider.login')
+    .div.border-bottom.p-2
+      a#user-tab.nav-link.text-white data-toggle="pill" href="#{admin_users_path}" role="tab" aria-controls="user" aria-selected="true"
+        = t('slider.user')
+    .div.border-bottom.p-2
+      a#preference-tab.nav-link.text-white data-toggle="pill" href="#{preferences_path}" role="tab" aria-controls="preference" aria-selected="true"
+        = t('slider.preference')
+    .div.border-bottom.p-2
+      a#suvery-tab.nav-link.text-white data-toggle="pill" href="#{surveys_path}" role="tab" aria-controls="suvery" aria-selected="true"
+        = t('slider.suvery')
+    .div.border-bottom.p-2
+      a#vanswer-tab.nav-link.text-white data-toggle="pill" href="#{survery_answers_path}" role="tab" aria-controls="vanswer" aria-selected="true"
+        = t('slider.answee')

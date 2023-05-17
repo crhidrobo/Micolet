@@ -1,0 +1,13 @@
+.card-body
+  .container-fluid.ml-0.mr-0.mb-0.d-none.d-sm-block.mt-4
+    .row.border-top.border-bottom
+      .col-sm-12
+        h6.font-weight-bold.card-title.mb-0.py-2.text-center #{t('survey.table.question')}
+  - @surveys.each do |survey|
+    .container-fluid.ml-0.mr-0
+      .row.mb-1.border-bottom
+        .col-sm-12.text-center.d-none.d-sm-block
+          = survey.question
+      - survey.survery_answers.each do |question|
+        .col-sm-12.d-none.d-sm-block
+          = question.answer

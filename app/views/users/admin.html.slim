@@ -1,0 +1,15 @@
+= render 'layouts/title'
+.card.border-0
+  .my-1
+    .row
+      .col-md-2.justify-content-center
+        = render 'layouts/slider'
+      .col-md-10
+        .card-header.d-flex.justify-content-center
+          h3.card-title.mb-0.ml-xs-4
+            = t('user.title')
+        - if @users.blank?
+          = render 'layouts/blanck'
+        - else
+          = render 'layouts/notification'
+          = render 'table'

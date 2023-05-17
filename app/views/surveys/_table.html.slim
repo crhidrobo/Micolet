@@ -1,0 +1,25 @@
+.card-body
+  .container-fluid.ml-0.mr-0.mb-0.d-none.d-sm-block.mt-4
+    .row.border-top.border-bottom
+      .col-sm-2
+        h6.font-weight-bold.card-title.mb-0.py-2.text-center #
+      .col-sm-4
+        h6.font-weight-bold.card-title.mb-0.py-2.text-center #{t('survey.table.title')}
+      .col-sm-6
+        h6.font-weight-bold.card-title.mb-0.py-2.text-center #{t('survey.table.question')}
+  - @surveys.each do |survey|
+    .container-fluid.ml-0.mr-0
+      .row.mb-1.border-bottom
+        .col-sm-2.text-center.d-none.d-sm-block
+          .d-flex.justify-content-center
+            = link_to  edit_survey_path(id: survey.id), \
+              class: "btn btn-outline-info btn-sm ml-1 " do
+                | #{t('survey.table.edit')}
+            = link_to survey, \
+              class: "btn btn-outline-danger btn-sm ml-1", \
+              method: :delete do
+                | #{t('survey.table.delete')}
+        .col-sm-4.text-center.d-none.d-sm-block
+          = survey.title
+        .col-sm-6.text-center.d-none.d-sm-block
+          = survey.question

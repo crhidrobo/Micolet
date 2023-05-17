@@ -1,0 +1,104 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  alert: 'Oops Presents errors in the form'
+  user:
+    buton_admin: 'Admin'
+    welcome: 'Welcome!'
+    country: 'Soon we will launch our site in this cuntry'
+    title: 'Active user'
+    table:
+      name: 'Name'
+      email: 'Email'
+      preference: 'Preferences'
+      date: 'Date'
+    form:
+      title: 'Enter your details'
+      name: 'Enter Your Name'
+      email: 'Enter Your Emai'
+      example_email: 'Example@gmail.com'
+      name_requer: '* Name is required'
+      required: 'Email is required'
+      ivalid: '* This email is invalid'
+      registered: '* This email is already registered'
+      des_preference: 'choose your preference (Required)'
+      buton: 'Subscribe me!'
+  preference:
+    title: 'Preferences'
+    table:
+      preference: 'Preference'
+      description: 'Description'
+      btn_delete: 'Delete'
+      btn_new: 'New'
+    form:
+      title: 'New Reference'
+      title_form: 'Enter Prefenrence'
+      preference: 'Preference'
+      preference_requer: '* Preference is required'
+      description: 'Description'
+      descrip_requer: '* Description is required'
+      btn_save: 'Save'
+  slider:
+    title: 'Admin'
+    login: 'Login'
+    user: 'Users'
+    preference: 'Preference'
+    suvery: 'Survey'
+    answee: 'Answer'
+  notification:
+    registre: No records found!
+    add: 'When records are added they will be displayed here.'
+  survey:
+    title: 'Survey'
+    table:
+      btn_new: 'Add'
+      number: 'Number'
+      question: 'Question'
+      title: 'Title'
+      delete: 'Delete'
+      edit: 'Edit'
+    form:
+      title: 'New Reference'
+      title_form: 'Enter question'
+      tilte_question: 'Title'
+      question_requer: '* Title is required'
+      question: 'Question'
+      question_requer: '* Question is required'
+      btn_save: 'Save'
+  answer:
+    title: 'Responde las preguntas'
+    number: 'Number'
+    question: 'Question'
+    answer: 'Answer'
+    buton: 'Next'
+
+

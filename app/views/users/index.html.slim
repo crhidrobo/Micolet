@@ -1,0 +1,20 @@
+= controlled_form do
+  .container-fluid-mt-4.rounded.p-5.body
+    .row.align-items-strectch
+      .col-md-5.bg.rounded.d-none.d-lg-block
+      .col-md-7.px-5
+        .container.card-header.position-sticky.sticky-top
+          .div.d-grid.gap-2.d-md-flex.justify-content-md-end
+            = link_to admin_users_path,
+              class: 'btn btn-primary btn-sm' do
+              = t('user.buton_admin')
+          .div.d-flex.justify-content-center
+            = image_tag 'logo.png'
+          .div.text-center
+            .h1.mb-0.fw-bold.py-4 #{t('user.welcome')}
+            .h5.mb-0.fw-bold.mb-2 #{t('user.country')}
+          .card-body
+            = render 'layouts/notification'
+            = render 'form'
+
+

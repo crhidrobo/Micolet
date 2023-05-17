@@ -1,0 +1,28 @@
+ = controlled_form do
+  .div.p-5
+    .card.border-1.p-3
+      .card-header.d-flex
+        .col-md-12
+          h3.card-title.mb-0.ml-xs-4.text-center
+            = t('answer.title')
+      .card-body
+        = render 'error/error_messages', object: @survery_answer
+        = form_for @survery_answer,
+          remote: true,
+          data: { action: 'ajax:error->form#onPostError ajax:success->form#onPostSuccess' },
+          html: { id: 'for_answer'} do |f|
+          .card-title
+            - survey = Survey.find(@survery_answer.survey_id)
+            .h3.mb-2
+              | #{survey.title} 
+            .h5.mb-2
+              | #{survey.question} 
+          .card-body.fw-bold
+            = f.hidden_field :survey_id
+            = f.hidden_field :user_id
+            .form-grup.mb-3
+              = f.label :answer, t('answer.answer')
+              = f.text_area :answer, placeholder: t('answer.answer'), class: 'form-control'
+            .div.d-grid
+              button.btn.btn-success type='submit' form='for_answer'
+                = t('answer.buton')

@@ -1,0 +1,23 @@
+= render 'layouts/title'
+.card.border-0
+  .my-1
+    .row
+      .col-md-2
+        = render 'layouts/slider'
+      .col-md-10
+        .row
+          .card-header.d-flex
+            .col-md-11
+              h3.card-title.mb-0.ml-xs-4.text-center
+                = t('preference.title')
+            .col-md-1
+              = link_to new_preference_path,
+                class: 'btn btn-primary btn-sm mx-auto' do
+                = t('preference.table.btn_new')
+        - if @preferences.blank?
+          = render 'layouts/blanck'
+        - else
+          = render 'layouts/notification'
+          = render 'table'
+
+

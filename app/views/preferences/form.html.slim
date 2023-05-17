@@ -1,0 +1,36 @@
+ = controlled_form do
+  = render 'layouts/title'
+  .card.border-0
+    .my-1
+      .row
+        .col-md-2
+          = render 'layouts/slider'
+        .col-md-10
+          .row
+            .card-header.d-flex
+              .col-md-12
+                h3.card-title.mb-0.ml-xs-4.text-center
+                  = t('preference.form.title')
+            .card-body
+              = render 'error/error_messages', object: @preference
+              = form_for @preference,
+                remote: true,
+                data: { action: 'ajax:error->form#onPostError ajax:success->form#onPostSuccess' },
+                html: { id: 'for_preference'} do |f|
+                .card-title
+                  .h4.mb-2
+                    | #{t('preference.form.title_form')} 
+                .card-body.fw-bold
+                  .form-grup.mb-3
+                    = f.label :preference, t('preference.form.preference')
+                    = f.text_area :preference, placeholder: t('preference.form.preference'), class: 'form-control'
+                    - if @preference.errors[:preference].present?
+                        .h12.text-danger=  t('preference.form.preference_requer')
+                  .form-grup.mb-4
+                    = f.label :description, t('preference.form.description')
+                    = f.text_area :description, placeholder: t('preference.form.description'), class: 'form-control'
+                    - if @preference.errors[:description].present?
+                      .h12.text-danger=  t('preference.form.descrip_requer')
+                  .div.d-grid
+                    button.btn.btn-success type='submit' form='for_preference'
+                      = t('preference.form.btn_save')

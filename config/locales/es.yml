@@ -1,0 +1,104 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+es:
+  alert: 'Oops Presenta errores en el formulario'
+  user:
+    buton_admin: 'Administrador'
+    welcome: '¡Bienvenido!'
+    country: 'Próximamente lanzaremos nuestro sitio en este país'
+    title: 'Usuarios Activos'
+    table:
+      name: 'Nombre'
+      email: 'Email'
+      preference: 'Preferencias'
+      date: 'Fecha'
+    form:
+      title: 'Ingrese sus datos'
+      name: 'Ingrese su Nombre'
+      email: 'Ingrese su Email'
+      example_email: 'Ejemplo@gmail.com'
+      name_requer: '* El nombre es requerido'
+      required: '* El Email es requerido'
+      ivalid: '* El Email es ivalido'
+      registered: '* Este correo ya esta registrado'
+      des_preference: 'elige tu preferencia (Requerido)'
+      buton: 'Suscribirme'
+  preference:
+    title: 'Preferencia'
+    table:
+      preference: 'Preferencia'
+      description: 'Descripción'
+      btn_delete: 'Eliminar'
+      btn_new: 'Nuevo'
+    form:
+      title: 'Nueva Preferencia'
+      title_form: 'Ingrese Preferencia'
+      preference: 'Preferencia'
+      preference_requer: '* Preferencia es requerida'
+      description: 'Descripción'
+      descrip_requer: '* Descripción es requerida'
+      btn_save: 'Guardar'
+  slider:
+    title: 'Administrador'
+    login: 'Login'
+    user: 'Usuarios'
+    preference: 'Preferencia'
+    suvery: 'Encuestas'
+    answee: 'Respuestas'
+  notification:
+    registre: '¡No se encontraron registros!'
+    add: 'Cuando se agreguen registros, se mostrarán aquí.'
+  survey:
+    title: 'Encuesta'
+    table:
+      btn_new: 'Agregar'
+      number: 'Numero'
+      question: 'Pregunta'
+      title: 'Título'
+      delete: 'Eliminar'
+      edit: 'Editar'
+    form:
+      title: 'Encuesta'
+      title_form: 'Ingrese sus preguntas'
+      tilte_question: 'Título'
+      question_requer: '* Título es requerido'
+      question: 'Pregunta'
+      question_requer: '* Pregunta es requerida'
+      btn_save: 'Guardar'
+  answer:
+    title: 'Responde las preguntas'
+    number: 'Numero'
+    question: 'Pregunta'
+    answer: 'Respuesta'
+    buton: 'Siguiente'
+
+

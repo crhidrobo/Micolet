@@ -1,0 +1,36 @@
+ = controlled_form do
+  = render 'layouts/title'
+  .card.border-0
+    .my-1
+      .row
+        .col-md-2
+          = render 'layouts/slider'
+        .col-md-10
+          .row
+            .card-header.d-flex
+              .col-md-12
+                h3.card-title.mb-0.ml-xs-4.text-center
+                  = t('survey.form.title')
+            .card-body
+              = render 'error/error_messages', object: @survey
+              = form_for @survey,
+                remote: true,
+                data: { action: 'ajax:error->form#onPostError ajax:success->form#onPostSuccess' },
+                html: { id: 'for_survey'} do |f|
+                .card-title
+                  .h4.mb-2
+                    | #{t('survey.form.title_form')} 
+                .card-body.fw-bold
+                  .form-grup.mb-3
+                    = f.label :title, t('survey.form.tilte_question')
+                    = f.text_area :title, placeholder: t('survey.form.tilte_question'), class: 'form-control'
+                    - if @survey.errors[:title].present?
+                        .h12.text-danger=  t('survey.form.survey_requer')
+                  .form-grup.mb-4
+                    = f.label :question, t('survey.form.question')
+                    = f.text_area :question, placeholder: t('survey.form.question'), class: 'form-control'
+                    - if @survey.errors[:description].present?
+                      .h12.text-danger=  t('survey.form.question_requer')
+                  .div.d-grid
+                    button.btn.btn-success type='submit' form='for_survey'
+                      = t('survey.form.btn_save')

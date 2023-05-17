@@ -1,0 +1,23 @@
+.card-body
+  .container-fluid.ml-0.mr-0.mb-0.d-none.d-sm-block.mt-4
+    .row.border-top.border-bottom
+      .col-sm-3
+        h6.font-weight-bold.card-title.mb-0.py-2.text-center #{t('user.table.name')}
+      .col-sm-3
+        h6.font-weight-bold.card-title.mb-0.py-2.text-center #{t('user.table.email')}
+      .col-sm-3
+        h6.font-weight-bold.card-title.mb-0.py-2.text-center #{t('user.table.preference')}
+      .col-sm-3
+        h6.font-weight-bold.card-title.mb-0.py-2.text-center #{t('user.table.date')}
+  - @users.each do |user|
+    .container-fluid.ml-0.mr-0
+      .row.mb-1.border-bottom
+        .col-sm-3.text-center.d-none.d-sm-block
+          = user.name
+        .col-sm-3.text-center.d-none.d-sm-block
+          = user.email
+        .col-sm-3.text-center.d-none.d-sm-block
+          - user.des_preferences.each do |des_preference|
+            .p #{des_preference.preference.preference}
+        .col-sm-3.text-center.d-none.d-sm-block
+          = user.created_at

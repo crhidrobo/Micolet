@@ -1,7 +1,5 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Proyecto desarrollado por Cristian Hidrobo como prueba Tecnica para Micolet, Usa SQLite como base de datos solo se debe correr el servidor locar (Rails s)
 
 Things you may want to cover:
 
